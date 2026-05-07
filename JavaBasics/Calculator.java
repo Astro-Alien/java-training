@@ -4,11 +4,11 @@ import java.util.function.BiFunction;
 
 public class Calculator {
 
-    private final Map<String, BiFunction<Integer, Integer, Integer>> ACTION_MAP = Map.of(
-        "add", this::addition,
-        "sub", this::subtraction,
-        "mul", this::multiplication,
-        "div", this::division
+    private static final Map<String, BiFunction<Integer, Integer, Integer>> ACTION_MAP = Map.of(
+        "add", Calculator::addition,
+        "sub", Calculator::subtraction,
+        "mul", Calculator::multiplication,
+        "div", Calculator::division
     );
 
     private static final Map<String, String> ACTION_LIST = Map.of(
@@ -36,19 +36,19 @@ public class Calculator {
         return actionMethod.apply(numberOne, numberTwo);
     }
 
-    private int addition(int a, int b) {
+    private static int addition(int a, int b) {
         return a + b;
     }
 
-    private int subtraction(int a, int b) {
+    private static int subtraction(int a, int b) {
         return a - b;
     }
 
-    private int multiplication(int a, int b) {
+    private static int multiplication(int a, int b) {
         return a * b;
     }
 
-    private int division(int a, int b) {
+    private static int division(int a, int b) {
         if (b == 0) {
             throw new IllegalArgumentException(
                 "Cannot divide by zero."
