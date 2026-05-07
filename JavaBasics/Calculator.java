@@ -1,4 +1,3 @@
-
 import java.util.Map;
 import java.util.function.BiFunction;
 
@@ -54,6 +53,7 @@ public class Calculator {
                 "Cannot divide by zero."
             );
         }
+        
         return a / b;
     }
 }
