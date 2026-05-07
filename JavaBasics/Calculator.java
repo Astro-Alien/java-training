@@ -19,6 +19,7 @@ public class Calculator {
     );
 
     public int calculate(String action) {
+        
         if (ACTION_LIST.containsKey(action) == false) {
             throw new IllegalArgumentException(
                 "Unknown action was passed in: " + action
@@ -48,6 +49,11 @@ public class Calculator {
     }
 
     private int division(int a, int b) {
+        if (b == 0) {
+            throw new IllegalArgumentException(
+                "Cannot divide by zero."
+            );
+        };
         return a / b;
     }
 }
