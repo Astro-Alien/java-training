@@ -53,7 +53,7 @@ public class Calculator {
             throw new IllegalArgumentException(
                 "Cannot divide by zero."
             );
-        };
+        }
         return a / b;
     }
 }
