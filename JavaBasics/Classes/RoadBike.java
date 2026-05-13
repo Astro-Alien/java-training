@@ -10,7 +10,7 @@ class RoadBike extends BicycleImpl {
     @Override
     public void retrieveStates() {
         IO.println(
-                """
+            """
                 Bicycle Name: %s
                 Bicycle Speed: %s
                 Bicycle Cadence: %s
